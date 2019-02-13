@@ -6,7 +6,7 @@ namespace DanceHub.Models
 {
     public class DanceTeam
     {
-        [Key, Timestamp]
+        [Key]
         public int TeamId { get; set; }
         public string Team { get; set; }
         public int YearCreated { get; set; }

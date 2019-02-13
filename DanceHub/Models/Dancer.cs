@@ -12,5 +12,9 @@ namespace DanceHub.Models
         [ForeignKey("DanceTeam")]
         public int DanceTeamId { get; set; }
         public DanceTeam DanceTeam { get; set; }
+
+        [ForeignKey("Achievements")]
+        public int AchievementId { get; set; }
+        public Achievements Achievements { get; set; }
     }
 }

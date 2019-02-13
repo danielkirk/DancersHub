@@ -217,13 +217,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201902130405321_initialMigration.cs" />
-    <Compile Include="Migrations\201902130405321_initialMigration.Designer.cs">
-      <DependentUpon>201902130405321_initialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201902130450371_initialMigration.cs" />
+    <Compile Include="Migrations\201902130450371_initialMigration.Designer.cs">
+      <DependentUpon>201902130450371_initialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Achievements.cs" />
     <Compile Include="Models\Dancer.cs" />
     <Compile Include="Models\DanceTeam.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -321,8 +322,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201902130405321_initialMigration.resx">
-      <DependentUpon>201902130405321_initialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201902130450371_initialMigration.resx">
+      <DependentUpon>201902130450371_initialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
