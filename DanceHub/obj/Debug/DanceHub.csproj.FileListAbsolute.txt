@@ -117,3 +117,4 @@ D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.dll
 D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.pdb
 D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.Migrations.initialMigration.resources
 D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.csproj.GenerateResource.cache
+D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.Migrations.fluentapi.resources

@@ -221,10 +221,14 @@
     <Compile Include="Migrations\201902130450371_initialMigration.Designer.cs">
       <DependentUpon>201902130450371_initialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902140329560_fluentapi.cs" />
+    <Compile Include="Migrations\201902140329560_fluentapi.Designer.cs">
+      <DependentUpon>201902140329560_fluentapi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Achievements.cs" />
+    <Compile Include="Models\Achievement.cs" />
     <Compile Include="Models\Dancer.cs" />
     <Compile Include="Models\DanceTeam.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -324,6 +328,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201902130450371_initialMigration.resx">
       <DependentUpon>201902130450371_initialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902140329560_fluentapi.resx">
+      <DependentUpon>201902140329560_fluentapi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

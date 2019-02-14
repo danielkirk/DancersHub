@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace DanceHub.Models
 {
@@ -8,11 +6,8 @@ namespace DanceHub.Models
     {
         [Key]
         public int TeamId { get; set; }
-        public string Team { get; set; }
+        public string TeamName { get; set; }
         public int YearCreated { get; set; }
         public string DirectorName { get; set; }
-
-        [InverseProperty("DanceTeam")]
-        public ICollection<Dancer> Dancers { get; set; }
     }
 }
