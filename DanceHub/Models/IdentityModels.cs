@@ -39,7 +39,7 @@ namespace DanceHub.Models
                     m.MapLeftKey("DancerId");
                     m.MapRightKey("AchievementId");
                     m.ToTable("DancerAchievements");
-                });
+                }).MapToStoredProcedures();
 
             modelBuilder.Entity<Dancer>()
                .HasMany(k => k.DanceTeams)
@@ -49,7 +49,7 @@ namespace DanceHub.Models
                    m.MapLeftKey("DancerId");
                    m.MapRightKey("TeamId");
                    m.ToTable("DancerDanceTeam");
-               });
+               }).MapToStoredProcedures();
 
             modelBuilder.Entity<Dancer>().MapToStoredProcedures();
             modelBuilder.Entity<DanceTeam>().MapToStoredProcedures();

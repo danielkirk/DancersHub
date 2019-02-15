@@ -232,9 +232,9 @@
     <Compile Include="Migrations\201902140329560_fluentapi.Designer.cs">
       <DependentUpon>201902140329560_fluentapi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201902150152463_sqlprocs.cs" />
-    <Compile Include="Migrations\201902150152463_sqlprocs.Designer.cs">
-      <DependentUpon>201902150152463_sqlprocs.cs</DependentUpon>
+    <Compile Include="Migrations\201902150215382_sqlprocs.cs" />
+    <Compile Include="Migrations\201902150215382_sqlprocs.Designer.cs">
+      <DependentUpon>201902150215382_sqlprocs.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -346,8 +346,8 @@
     <EmbeddedResource Include="Migrations\201902140329560_fluentapi.resx">
       <DependentUpon>201902140329560_fluentapi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902150152463_sqlprocs.resx">
-      <DependentUpon>201902150152463_sqlprocs.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201902150215382_sqlprocs.resx">
+      <DependentUpon>201902150215382_sqlprocs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
