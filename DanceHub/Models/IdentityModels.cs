@@ -50,6 +50,10 @@ namespace DanceHub.Models
                    m.MapRightKey("TeamId");
                    m.ToTable("DancerDanceTeam");
                });
+
+            modelBuilder.Entity<Dancer>().MapToStoredProcedures();
+            modelBuilder.Entity<DanceTeam>().MapToStoredProcedures();
+            modelBuilder.Entity<Achievement>().MapToStoredProcedures();
         }
 
         public static ApplicationDbContext Create()

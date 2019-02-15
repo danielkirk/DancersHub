@@ -232,15 +232,19 @@
     <Compile Include="Migrations\201902140329560_fluentapi.Designer.cs">
       <DependentUpon>201902140329560_fluentapi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902150152463_sqlprocs.cs" />
+    <Compile Include="Migrations\201902150152463_sqlprocs.Designer.cs">
+      <DependentUpon>201902150152463_sqlprocs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Achievement.cs" />
     <Compile Include="Models\Dancer.cs" />
     <Compile Include="Models\DanceTeam.cs" />
-    <Compile Include="Models\DTOs\AchievementDTO.cs" />
-    <Compile Include="Models\DTOs\DancerDTO.cs" />
-    <Compile Include="Models\DTOs\DanceTeamDTO.cs" />
+    <Compile Include="DataObjects\DTOs\AchievementDTO.cs" />
+    <Compile Include="DataObjects\DTOs\DancerDTO.cs" />
+    <Compile Include="DataObjects\DTOs\DanceTeamDTO.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
@@ -341,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902140329560_fluentapi.resx">
       <DependentUpon>201902140329560_fluentapi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902150152463_sqlprocs.resx">
+      <DependentUpon>201902150152463_sqlprocs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

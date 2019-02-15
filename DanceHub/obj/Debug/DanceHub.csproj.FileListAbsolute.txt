@@ -48,6 +48,7 @@ D:\SF.Code\DanceHub\DanceHub\bin\roslyn\vbc.rsp
 D:\SF.Code\DanceHub\DanceHub\bin\roslyn\VBCSCompiler.exe
 D:\SF.Code\DanceHub\DanceHub\bin\roslyn\VBCSCompiler.exe.config
 D:\SF.Code\DanceHub\DanceHub\bin\Antlr3.Runtime.dll
+D:\SF.Code\DanceHub\DanceHub\bin\AutoMapper.dll
 D:\SF.Code\DanceHub\DanceHub\bin\EntityFramework.dll
 D:\SF.Code\DanceHub\DanceHub\bin\EntityFramework.SqlServer.dll
 D:\SF.Code\DanceHub\DanceHub\bin\Microsoft.AspNet.Identity.Core.dll
@@ -69,6 +70,7 @@ D:\SF.Code\DanceHub\DanceHub\bin\Newtonsoft.Json.dll
 D:\SF.Code\DanceHub\DanceHub\bin\Owin.dll
 D:\SF.Code\DanceHub\DanceHub\bin\System.Diagnostics.DiagnosticSource.dll
 D:\SF.Code\DanceHub\DanceHub\bin\System.Net.Http.Formatting.dll
+D:\SF.Code\DanceHub\DanceHub\bin\System.ValueTuple.dll
 D:\SF.Code\DanceHub\DanceHub\bin\System.Web.Helpers.dll
 D:\SF.Code\DanceHub\DanceHub\bin\System.Web.Http.dll
 D:\SF.Code\DanceHub\DanceHub\bin\System.Web.Http.Owin.dll
@@ -80,6 +82,9 @@ D:\SF.Code\DanceHub\DanceHub\bin\System.Web.WebPages.Deployment.dll
 D:\SF.Code\DanceHub\DanceHub\bin\System.Web.WebPages.dll
 D:\SF.Code\DanceHub\DanceHub\bin\System.Web.WebPages.Razor.dll
 D:\SF.Code\DanceHub\DanceHub\bin\WebGrease.dll
+D:\SF.Code\DanceHub\DanceHub\bin\AutoMapper.pdb
+D:\SF.Code\DanceHub\DanceHub\bin\AutoMapper.xml
+D:\SF.Code\DanceHub\DanceHub\bin\System.ValueTuple.xml
 D:\SF.Code\DanceHub\DanceHub\bin\Newtonsoft.Json.xml
 D:\SF.Code\DanceHub\DanceHub\bin\System.Net.Http.Formatting.xml
 D:\SF.Code\DanceHub\DanceHub\bin\System.Web.Helpers.xml
@@ -111,10 +116,11 @@ D:\SF.Code\DanceHub\DanceHub\bin\System.Diagnostics.DiagnosticSource.xml
 D:\SF.Code\DanceHub\DanceHub\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 D:\SF.Code\DanceHub\DanceHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.csprojAssemblyReference.cache
+D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.Migrations.initialMigration.resources
+D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.Migrations.fluentapi.resources
+D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.csproj.GenerateResource.cache
 D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.csproj.CoreCompileInputs.cache
 D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.csproj.CopyComplete
 D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.dll
 D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.pdb
-D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.Migrations.initialMigration.resources
-D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.csproj.GenerateResource.cache
-D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.Migrations.fluentapi.resources
+D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.Migrations.sqlprocs.resources
