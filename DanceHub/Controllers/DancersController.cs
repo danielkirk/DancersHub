@@ -1,10 +1,12 @@
 ﻿using DanceHub.Models;
 using DanceHub.Models.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
@@ -31,20 +33,28 @@ namespace DanceHub.Controllers
 
         }
 
-        // GET: api/Dancers/5
+        [HttpGet]
         [ResponseType(typeof(DancerDTO))]
         public async Task<IHttpActionResult> GetDancer(int id)
         {
-            Dancer dancer = await db.Dancers.FindAsync(id);
-            if (dancer == null)
+            try
             {
-                return NotFound();
-            }
+                Dancer dancer = await db.Dancers.FindAsync(id);
+                var result = AutoMapper.Mapper.Map<DancerDTO>(dancer);
+                if (dancer == null)
+                {
+                    return NotFound();
+                }
 
-            return Ok(dancer);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex));
+            }
         }
 
-        // PUT: api/Dancers/5
+        [HttpPut]
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutDancer(int id, Dancer dancer)
         {
@@ -79,25 +89,31 @@ namespace DanceHub.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Dancers
         [HttpPost]
         [ResponseType(typeof(DancerDTO))]
         public async Task<IHttpActionResult> PostDancer([FromBody] DancerDTO dancer)
         {
-            if (!ModelState.IsValid)
+
+            try
             {
-                return BadRequest(ModelState);
+                if (!ModelState.IsValid)
+                {
+                    return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState));
+                }
+                var result = AutoMapper.Mapper.Map<Dancer>(dancer);
+                db.Dancers.Add(result);
+
+                await db.SaveChangesAsync();
+
+                return CreatedAtRoute("DefaultApi", new { id = dancer.DancerId }, dancer);
             }
+            catch (Exception ex)
+            {
 
-            var result = AutoMapper.Mapper.Map<Dancer>(dancer);
-            db.Dancers.Add(result);
-
-            await db.SaveChangesAsync();
-
-            return CreatedAtRoute("DefaultApi", new { id = dancer.DancerId }, dancer);
+                return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex));
+            }
         }
 
-        // DELETE: api/Dancers/5
         [ResponseType(typeof(Dancer))]
         public async Task<IHttpActionResult> DeleteDancer(int id)
         {
