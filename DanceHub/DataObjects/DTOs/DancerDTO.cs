@@ -15,7 +15,10 @@ namespace DanceHub.Models.DTOs
         [DataMember]
         public int DanceExperience { get; set; }
 
+        [DataMember]
         public List<DanceTeamDTO> DanceTeams { get; set; }
+
+        [DataMember]
         public List<AchievementDTO> Achievements { get; set; }
     }
 }

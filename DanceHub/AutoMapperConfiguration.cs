@@ -8,9 +8,12 @@ namespace DanceHub
     {
         public static void Configure()
         {
-            Mapper.Initialize(cfg => cfg.CreateMap<Dancer, DancerDTO>());
-            Mapper.Initialize(cfg => cfg.CreateMap<DanceTeam, DanceTeamDTO>());
-            Mapper.Initialize(cfg => cfg.CreateMap<Achievement, AchievementDTO>());
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<DancerDTO, Dancer>().ReverseMap();
+                cfg.CreateMap<DanceTeamDTO, DanceTeam>().ReverseMap();
+                cfg.CreateMap<AchievementDTO, Achievement>().ReverseMap();
+            });
         }
     }
 }

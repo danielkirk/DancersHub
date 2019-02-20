@@ -123,4 +123,11 @@ D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.csproj.CoreCompileInputs.cache
 D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.csproj.CopyComplete
 D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.dll
 D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.pdb
-D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.Migrations.sqlprocs.resources
+D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.Migrations.seeddata.resources
+D:\SF.Code\DanceHub\DanceHub\obj\Debug\DanceHub.Migrations.seedmoredata.resources
+D:\SF.Code\DanceHub\DanceHub\bin\Microsoft.Threading.Tasks.dll
+D:\SF.Code\DanceHub\DanceHub\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\SF.Code\DanceHub\DanceHub\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\SF.Code\DanceHub\DanceHub\bin\Microsoft.Threading.Tasks.xml
+D:\SF.Code\DanceHub\DanceHub\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\SF.Code\DanceHub\DanceHub\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml

@@ -1,9 +1,6 @@
 namespace DanceHub.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<DanceHub.Models.ApplicationDbContext>
     {
@@ -14,7 +11,15 @@ namespace DanceHub.Migrations
 
         protected override void Seed(DanceHub.Models.ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            context.Dancers.AddOrUpdate(p => p.DancerId,
+                new Models.Dancer { Name = "Daniel Kirk", DanceExperience = 2 });
+            context.DanceTeams.AddOrUpdate(p => p.TeamId,
+                new Models.DanceTeam { TeamName = "ZeroIIHero", DirectorName = "Sean Kirk", YearCreated = 1024 }
+                );
+            context.Achievements.AddOrUpdate(p => p.AchievementId,
+                new Models.Achievement { AchievementName = "SDBDC", YearsWon = 2016 }
+                );
+
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.

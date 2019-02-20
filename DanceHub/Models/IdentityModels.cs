@@ -27,31 +27,15 @@ namespace DanceHub.Models
         }
 
         public DbSet<Dancer> Dancers { get; set; }
+        public DbSet<DanceTeam> DanceTeams { get; set; }
+        public DbSet<Achievement> Achievements { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Dancer>()
-                .HasMany(k => k.Achievements)
-                .WithMany()
-                .Map(m =>
-                {
-                    m.MapLeftKey("DancerId");
-                    m.MapRightKey("AchievementId");
-                    m.ToTable("DancerAchievements");
-                }).MapToStoredProcedures();
 
-            modelBuilder.Entity<Dancer>()
-               .HasMany(k => k.DanceTeams)
-               .WithMany()
-               .Map(m =>
-               {
-                   m.MapLeftKey("DancerId");
-                   m.MapRightKey("TeamId");
-                   m.ToTable("DancerDanceTeam");
-               }).MapToStoredProcedures();
+            modelBuilder.Configurations.Add(new DancerEntityConfig());
 
-            modelBuilder.Entity<Dancer>().MapToStoredProcedures();
             modelBuilder.Entity<DanceTeam>().MapToStoredProcedures();
             modelBuilder.Entity<Achievement>().MapToStoredProcedures();
         }

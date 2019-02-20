@@ -7,13 +7,13 @@ namespace DanceHub.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class sqlprocs : IMigrationMetadata
+    public sealed partial class seedmoredata : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(sqlprocs));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(seedmoredata));
         
         string IMigrationMetadata.Id
         {
-            get { return "201902150215382_sqlprocs"; }
+            get { return "201902192228440_seedmoredata"; }
         }
         
         string IMigrationMetadata.Source
