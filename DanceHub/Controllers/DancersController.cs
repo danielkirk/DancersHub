@@ -117,16 +117,24 @@ namespace DanceHub.Controllers
         [ResponseType(typeof(Dancer))]
         public async Task<IHttpActionResult> DeleteDancer(int id)
         {
-            Dancer dancer = await db.Dancers.FindAsync(id);
-            if (dancer == null)
+            try
             {
-                return NotFound();
+                Dancer dancer = await db.Dancers.FindAsync(id);
+                if (dancer == null)
+                {
+                    return NotFound();
+                }
+
+                db.Dancers.Remove(dancer);
+                await db.SaveChangesAsync();
+
+                return ResponseMessage(Request.CreateResponse(HttpStatusCode.OK, id));
             }
+            catch (Exception ex)
+            {
 
-            db.Dancers.Remove(dancer);
-            await db.SaveChangesAsync();
-
-            return Ok(dancer);
+                return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex));
+            }
         }
 
         protected override void Dispose(bool disposing)
