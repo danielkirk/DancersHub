@@ -6,7 +6,7 @@ namespace DanceHub.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(DanceHub.Models.ApplicationDbContext context)
@@ -14,7 +14,7 @@ namespace DanceHub.Migrations
             context.Dancers.AddOrUpdate(p => p.DancerId,
                 new Models.Dancer { Name = "Daniel Kirk", DanceExperience = 2 });
             context.DanceTeams.AddOrUpdate(p => p.TeamId,
-                new Models.DanceTeam { TeamName = "ZeroIIHero", DirectorName = "Sean Kirk", YearCreated = 1024 }
+                new Models.DanceTeam { TeamName = "ZeroIIHero", DirectorName = "Sean Kirk", YearCreated = 2014 }
                 );
             context.Achievements.AddOrUpdate(p => p.AchievementId,
                 new Models.Achievement { AchievementName = "SDBDC", YearsWon = 2016 }

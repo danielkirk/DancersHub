@@ -20,5 +20,10 @@ namespace DanceHub.Models.DTOs
 
         [DataMember]
         public List<AchievementDTO> Achievements { get; set; }
+
+        [DataMember]
+        public string UserId { get; set; }
+
+        public virtual ApplicationUser User { get; set; }
     }
 }

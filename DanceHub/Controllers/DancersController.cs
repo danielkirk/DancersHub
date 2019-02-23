@@ -75,7 +75,7 @@ namespace DanceHub.Controllers
 
         [HttpPut]
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutDancer(int id, Dancer dancer)
+        public async Task<IHttpActionResult> PutDancer(int id, DancerDTO dancer)
         {
             if (!ModelState.IsValid)
             {
@@ -110,7 +110,7 @@ namespace DanceHub.Controllers
 
         [HttpPost]
         [ResponseType(typeof(DancerDTO))]
-        public async Task<IHttpActionResult> PostDancer([FromBody] DancerDTO dancer)
+        public async Task<IHttpActionResult> PostDancer(DancerDTO dancer)
         {
 
             try
@@ -119,7 +119,16 @@ namespace DanceHub.Controllers
                 {
                     return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState));
                 }
-                var result = AutoMapper.Mapper.Map<Dancer>(dancer);
+                var user = db.Users.First(x => x.Id == dancer.UserId);
+                var hope = new DancerDTO
+                {
+                    Name = dancer.Name,
+                    DanceExperience = dancer.DanceExperience,
+                    User = user,
+                };
+                var result = AutoMapper.Mapper.Map<Dancer>(hope);
+
+
                 db.Dancers.Add(result);
 
                 await db.SaveChangesAsync();

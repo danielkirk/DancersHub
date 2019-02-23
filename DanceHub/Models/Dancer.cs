@@ -12,5 +12,8 @@ namespace DanceHub.Models
 
         public ICollection<DanceTeam> DanceTeams { get; set; }
         public ICollection<Achievement> Achievements { get; set; }
+
+        public string UserId { get; set; }
+        public virtual ApplicationUser User { get; set; }
     }
 }

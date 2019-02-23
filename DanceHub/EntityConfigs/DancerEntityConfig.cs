@@ -14,7 +14,7 @@ namespace DanceHub
                     m.MapLeftKey("DancerId");
                     m.MapRightKey("AchievementId");
                     m.ToTable("DancerAchievements");
-                }).MapToStoredProcedures();
+                });
 
             this.HasMany(k => k.DanceTeams)
                     .WithMany()
@@ -23,9 +23,10 @@ namespace DanceHub
                         m.MapLeftKey("DancerId");
                         m.MapRightKey("TeamId");
                         m.ToTable("DancerDanceTeam");
-                    }).MapToStoredProcedures();
+                    });
 
-            this.MapToStoredProcedures();
+            this.HasRequired(s => s.User).WithOptional(m => m.Dancer);
+
         }
 
     }

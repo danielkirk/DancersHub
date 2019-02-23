@@ -244,21 +244,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201902130450371_initialMigration.cs" />
-    <Compile Include="Migrations\201902130450371_initialMigration.Designer.cs">
-      <DependentUpon>201902130450371_initialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201902230740596_fixedConfig.cs" />
+    <Compile Include="Migrations\201902230740596_fixedConfig.Designer.cs">
+      <DependentUpon>201902230740596_fixedConfig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201902140329560_fluentapi.cs" />
-    <Compile Include="Migrations\201902140329560_fluentapi.Designer.cs">
-      <DependentUpon>201902140329560_fluentapi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902192212131_seeddata.cs" />
-    <Compile Include="Migrations\201902192212131_seeddata.Designer.cs">
-      <DependentUpon>201902192212131_seeddata.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902192228440_seedmoredata.cs" />
-    <Compile Include="Migrations\201902192228440_seedmoredata.Designer.cs">
-      <DependentUpon>201902192228440_seedmoredata.cs</DependentUpon>
+    <Compile Include="Migrations\201902230932542_helpme.cs" />
+    <Compile Include="Migrations\201902230932542_helpme.Designer.cs">
+      <DependentUpon>201902230932542_helpme.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -378,24 +370,18 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201902130450371_initialMigration.resx">
-      <DependentUpon>201902130450371_initialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902140329560_fluentapi.resx">
-      <DependentUpon>201902140329560_fluentapi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902192212131_seeddata.resx">
-      <DependentUpon>201902192212131_seeddata.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902192228440_seedmoredata.resx">
-      <DependentUpon>201902192228440_seedmoredata.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201902230740596_fixedConfig.resx">
+      <DependentUpon>201902230740596_fixedConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902230932542_helpme.resx">
+      <DependentUpon>201902230932542_helpme.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
