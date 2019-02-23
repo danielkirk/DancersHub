@@ -39,14 +39,33 @@ namespace DanceHub.Controllers
         {
             try
             {
-                Dancer dancer = await db.Dancers.FindAsync(id);
-                var result = AutoMapper.Mapper.Map<DancerDTO>(dancer);
-                if (dancer == null)
+
+                var result = db.Dancers.Where(d => d.DancerId == id).Include("DanceTeams").Include("Achievements").Select(d => new DancerDTO()
+                {
+                    DancerId = d.DancerId,
+                    Name = d.Name,
+                    DanceExperience = d.DanceExperience,
+                    DanceTeams = d.DanceTeams.Select(dt => new DanceTeamDTO()
+                    {
+                        TeamId = dt.TeamId,
+                        TeamName = dt.TeamName,
+                        DirectorName = dt.DirectorName,
+                        YearCreated = dt.YearCreated
+                    }).ToList(),
+                    Achievements = d.Achievements.Select(a => new AchievementDTO()
+                    {
+                        AchievementId = a.AchievementId,
+                        AchievementName = a.AchievementName,
+                        YearsWon = a.YearsWon
+                    }).ToList()
+                });
+
+                if (result == null)
                 {
                     return NotFound();
                 }
 
-                return Ok(result);
+                return Ok(await result.ToListAsync());
             }
             catch (Exception ex)
             {

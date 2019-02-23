@@ -235,6 +235,7 @@
     <Compile Include="Controllers\DanceTeamsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="DataObjects\DTOs\DancerDanceTeamDTO.cs" />
     <Compile Include="EntityConfigs\DancerEntityConfig.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
