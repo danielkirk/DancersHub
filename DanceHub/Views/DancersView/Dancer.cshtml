@@ -1,0 +1,25 @@
+﻿@model IEnumerable<DanceHub.Models.DTOs.DancerDTO>
+@{
+    ViewBag.Title = "Dancer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Your Dancers</h2>
+
+<div>
+    <table>
+        <tr>
+            <td>
+                <th>Dancer Name: </th>
+                <th>Dance Experience: </th>
+            </td>
+        </tr>
+        <tr>
+            @foreach (var dancer in @Model)
+            {
+                <td>@dancer.Name</td>
+                <td>@dancer.DanceExperience</td>
+            }
+        </tr>
+    </table>
+</div>
